@@ -1,0 +1,8 @@
+;!@Install@!UTF-8!
+InstallPath="%TMP%"
+GUIMode="2"
+ExecuteFile="setup.bat"
+ExecuteParameters=""
+Delete="DomainManager.dll"
+Delete="setup.bat"
+;!@InstallEnd@!
