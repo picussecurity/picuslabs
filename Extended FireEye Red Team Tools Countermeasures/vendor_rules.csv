@@ -1,113 +1,113 @@
-cve,vendor,engine,id,name,ThreatId
-"CVE-2019-19781",Checkpoint,IPS,"asm_dynamic_prop_CVE_2019_19781","Citrix Multiple Products Directory Traversal (CVE-2019-19781)",311195
-"CVE-2019-19781",Checkpoint,IPS,"asm_dynamic_prop_CVE_2019_19781","Citrix Multiple Products Directory Traversal (CVE-2019-19781)",321318
-"CVE-2019-0604",Checkpoint,AV,0F16F435A,"Generic.Win32.Generic.TC.ipc",365560
-"CVE-2019-3398",Checkpoint,IPS,"asm_dynamic_prop_DIR_TRAV_URL","Web Servers Malicious URL Directory Traversal",541281
-"CVE-2018-13379",Checkpoint,IPS,"asm_dynamic_prop_CVE_2018_13379","Fortinet FortiOS SSL VPN Directory Traversal (CVE-2018-13379)",545960
-"CVE-2019-11510",Checkpoint,IPS,"asm_dynamic_prop_CVE_2019_11510","Pulse Connect Secure File Disclosure (CVE-2019-11510)",575541
-"CVE-2020-10189",Checkpoint,IPS,"asm_dynamic_prop_CVE_2020_10189","Zoho ManageEngine Remote Code Execution (CVE-2020-10189)",752616
-"CVE-2019-0604",Fortigate,AV,7512603,"Riskware/Generic_PUA_BG",365560
-"CVE-2019-0604",Fortigate,IPS,47918,"applications3: MS.SharePoint.CVE-2019-0604.Remote.Code.Execution",836508
-"CVE-2020-0688",Fortigate,IPS,48765,"applications3: MS.Exchange.Validation.Key.ViewState.Remote.Code.Execution",765961
-"CVE-2019-11510",Fortigate,IPS,48342,"applications3: Pulse.Secure.SSL.VPN.HTML5.Information.Disclosure",575541
-"CVE-2018-13379",Fortigate,IPS,48321,"applications3: FortiOS.SSL.VPN.Web.Portal.Pathname.Information.Disclosure",545960
-"CVE-2019-3398",Fortigate,IPS,47983,"applications3: Confluence.downloadallattachments.Resource.Path.Traversal",541281
-"CVE-2019-19781",Fortigate,IPS,48653,"applications3: Citrix.Application.Delivery.Controller.VPNs.Directory.Traversal",321318
-"CVE-2019-19781",Fortigate,IPS,48653,"applications3: Citrix.Application.Delivery.Controller.VPNs.Directory.Traversal",311195
-"CVE-2020-0688",Fortiweb,WAF,090501065,"Known Exploits",765961
-"CVE-2020-10189",Fortiweb,WAF,090501069,"Known Exploits",752616
-"CVE-2019-11510",Fortiweb,WAF,050180003,"Generic Attacks",575541
-"CVE-2018-13379",Fortiweb,WAF,050180003,"Generic Attacks",545960
-"CVE-2019-3398",Fortiweb,WAF,090501108,"Known Exploits",541281
-"CVE-2019-19781",Fortiweb,WAF,090501033,"Known Exploits",321318
-"CVE-2019-19781",Fortiweb,WAF,090501033,"Known Exploits",311195
-"CVE-2020-0688",Snort,IPS,"1.53347.2","SERVER-WEBAPP Microsoft Exchange Control Panel remote code execution attempt",765961
-"CVE-2020-0688",Snort,IPS,"1.53383.1","SERVER-WEBAPP Microsoft Exchange Control Panel remote code execution attempt",765961
-"CVE-2020-0688",Snort,IPS,"1.2029540.3","ET WEB_SPECIFIC_APPS Possible Attempted Microsoft Exchange RCE (CVE-2020-0688)",765961
-"CVE-2020-10189",Snort,IPS,"1.53435.1","SERVER-WEBAPP Zoho ManageEngine Desktop Central directory traversal attempt",752616
-"CVE-2019-11510",Snort,IPS,"1.51288.2","SERVER-WEBAPP Pulse Secure SSL VPN arbitrary file read attempt",575541
-"CVE-2019-11510",Snort,IPS,"1.51289.1","SERVER-WEBAPP Pulse Secure SSL VPN directory traversal attempt",575541
-"CVE-2018-13379",Snort,IPS,"1.51370.1","SERVER-WEBAPP Fortinet FortiOS SSL VPN web portal directory traversal attempt",545960
-"CVE-2018-13379",Snort,IPS,"1.2027883.2","ET EXPLOIT FortiOS SSL VPN - Information Disclosure (CVE-2018-13379)",545960
-"CVE-2019-3398",Snort,IPS,"1.50168.1","SERVER-WEBAPP Atlassian Confluence Data Center and Server directory traversal attempt",541281
-"CVE-2019-19781",Snort,IPS,"1.52512.2","SERVER-WEBAPP Citrix ADC and Gateway arbitrary code execution attempt",321318
-"CVE-2019-19781",Snort,IPS,"1.52603.1","SERVER-WEBAPP Citrix ADC and Gateway arbitrary code execution attempt",321318
-"CVE-2019-19781",Snort,IPS,"1.2029206.3","ET EXPLOIT Possible Citrix Application Delivery Controller Arbitrary Code Execution Attempt (CVE-2019-19781)",321318
-"CVE-2019-19781",Snort,IPS,"1.52512.2","SERVER-WEBAPP Citrix ADC and Gateway arbitrary code execution attempt",311195
-"CVE-2019-19781",Snort,IPS,"1.52603.1","SERVER-WEBAPP Citrix ADC and Gateway arbitrary code execution attempt",311195
-"CVE-2019-19781",Snort,IPS,"1.2029206.3","ET EXPLOIT Possible Citrix Application Delivery Controller Arbitrary Code Execution Attempt (CVE-2019-19781)",311195
-"CVE-2019-19781",Snort,IPS,"1.2029255.3","ET EXPLOIT Possible Citrix Application Delivery Controller Arbitrary Code Execution Attempt (CVE-2019-19781) M2",311195
-"CVE-2020-0688",Paloalto,IPS,57766,"Microsoft Exchange Remote Code Execution Vulnerability",765961
-"CVE-2019-11510",Paloalto,IPS,30844,"HTTP Directory Traversal Request Attempt",575541
-"CVE-2018-13379",Paloalto,IPS,30844,"HTTP Directory Traversal Request Attempt",545960
-"CVE-2019-3398",Paloalto,IPS,55567,"Atlassian Confluence Path Traversal Vulnerability",541281
-"CVE-2019-19781",Paloalto,IPS,57497,"Citrix Application Delivery Controller And Gateway Directory Traversal Vulnerability",321318
-"CVE-2019-19781",Paloalto,IPS,57497,"Citrix Application Delivery Controller And Gateway Directory Traversal Vulnerability",311195
-"CVE-2019-19781",F5,WAF,200004998,"Citrix NetScaler NSC_USER Remote Code Execution",311195
-"CVE-2019-19781",F5,WAF,200007011,"Directory Traversal attempt ""../"" (Header)",311195
-"CVE-2019-19781",F5,WAF,200007029,"Directory Traversal attempt ""../"" (URI)",311195
-"CVE-2019-19781",F5,WAF,200101550,"Directory Traversal attempt (Content)",311195
-"CVE-2019-19781",F5,WAF,200010036,"(GHDB) Smb.conf access",321318
-"CVE-2019-3398",F5,WAF,200000190,"Directory Traversal attempt ""../../"" (Parameter)",541281
-"CVE-2019-3398",F5,WAF,200003443,"Java code injection - Runtime.getRuntime (Parameter)",541281
-"CVE-2019-3398",F5,WAF,200004048,"ASP/JSP injection attempt ( <% )",541281
-"CVE-2019-3398",F5,WAF,200004161,"PHP injection attempt (exec)",541281
-"CVE-2019-3398",F5,WAF,200007016,"Directory Traversal attempt ""../"" (Parameter)",541281
-"CVE-2019-3398",F5,WAF,200101550,"Directory Traversal attempt (Content)",541281
-"CVE-2018-13379",F5,WAF,200000190,"Directory Traversal attempt ""../../"" (Parameter)",545960
-"CVE-2019-11510",F5,WAF,200003056,"""/etc"" execution attempt (URI)",575541
-"CVE-2020-0688",F5,WAF,200104091,"Microsoft Exchange __VIEWSTATE Predictable Key",765961
-"CVE-2019-0604",F5,WAF,200004562,"SharePoint ItemPicker Unsafe Deserialization",836508
-"CVE-2019-19781",Mcafee,IPS,0x40200c00,"HTTP: CGI Escape Character Directory Traversal",311195
-"CVE-2019-19781",Mcafee,IPS,0x4515b100,"HTTP: CGI Escape Character Directory Traversal II",311195
-"CVE-2019-19781",Mcafee,IPS,0x45272800,"HTTP: Citrix ADC Arbitrary Code Execution Vulnerability (CVE-2019-19781)",311195
-"CVE-2019-19781",Mcafee,IPS,0x40200c00,"HTTP: CGI Escape Character Directory Traversal",321318
-"CVE-2019-19781",Mcafee,IPS,0x45272800,"HTTP: Citrix ADC Arbitrary Code Execution Vulnerability (CVE-2019-19781)",321318
-"CVE-2018-13379",Mcafee,IPS,0x45274900,"HTTP: FortiOS SSL VPN Arbitrary File Read Vulnerability (CVE-2018-13379)",545960
-"CVE-2019-11510",Mcafee,IPS,0x40200c00,"HTTP: CGI Escape Character Directory Traversal",575541
-"CVE-2019-11510",Mcafee,IPS,0x4020af00,"HTTP: Attempt to Read Password File",575541
-"CVE-2019-19781",Forcepoint,IPS,,"HTTP_CRL-Citrix-Path-Traversal-CVE-2019-19781",311195
-"CVE-2019-19781",Forcepoint,IPS,,"HTTP_CRL-Citrix-Path-Traversal-CVE-2019-19781",321318
-"CVE-2019-0604",Forcepoint,AV,,"File_Malware-Blocked",365560
-"CVE-2019-3398",Forcepoint,IPS,,"HTTP_CSU-Dot-Dot-Slash-Dot-Dot-Slash-Dot-Dot-Directory-Traversal",541281
-"CVE-2018-13379",Forcepoint,IPS,,"HTTP_CSU-Dot-Dot-Slash-Dot-Dot-Slash-Dot-Dot-Directory-Traversal",545960
-"CVE-2019-11510",Forcepoint,IPS,,"HTTP_CSU-Pulse-Secure-SSL-VPN-Pre-Auth-Arbitrary-File-Reading",575541
-"CVE-2020-10189",Forcepoint,IPS,,"HTTP_CRL-Manageengine-Desktop-Central-Java-Deserialization",752616
-"CVE-2020-0688",Forcepoint,IPS,,"HTTP_CRL-Microsoft-Exchange-Validation-Key-Remote-Code-Execution",765961
-"CVE-2019-0604",Forcepoint,IPS,,"HTTP_CSU-Microsoft-SharePoint-Remote-Code-Execution",836508
-"CVE-2019-3398",Citrix,WAF,999774,"web-misc atlassian confluence or data center - downloadallattachments path traversal vulnerability (cve-2019-3398)",541281
-"CVE-2019-11510",Citrix,WAF,1122,"web-misc /etc/passwd",575541
-"CVE-2020-10189",Citrix,WAF,999651,"web-misc zoho manageengine desktop central prior to 10.0.479 - unauthenticated arbitrary file upload vuln (cve-2020-10189)",752616
-"CVE-2020-0688",Citrix,WAF,999653,"web-misc microsoft exchange server - validation key remote code execution vulnerability (cve-2020-0688)",765961
-"CVE-2019-0604",Firepower,AV,,"Auto.E4E05C.231541.in02",365560
-"CVE-2019-0604",Firepower,IPS,"1.55862.2","SERVER-WEBAPP Microsoft SharePoint EntityInstanceIdEncoder remote code execution attempt",836508
-"CVE-2020-0688",Firepower,IPS,"1.53382.1","SERVER-WEBAPP Microsoft Exchange Control Panel static viewstate key use attempt",765961
-"CVE-2020-0688",Firepower,IPS,"1.53383.1","SERVER-WEBAPP Microsoft Exchange Control Panel remote code execution attempt",765961
-"CVE-2020-0688",Firepower,IPS,"1.53347.2","SERVER-WEBAPP Microsoft Exchange Control Panel remote code execution attempt",765961
-"CVE-2020-10189",Firepower,IPS,"1.53435.1","SERVER-WEBAPP Zoho ManageEngine Desktop Central directory traversal attempt",752616
-"CVE-2019-11510",Firepower,IPS,"1.51288.2","SERVER-WEBAPP Pulse Secure SSL VPN arbitrary file read attempt",575541
-"CVE-2019-11510",Firepower,IPS,"1.51289.1","SERVER-WEBAPP Pulse Secure SSL VPN directory traversal attempt",575541
-"CVE-2018-13379",Firepower,IPS,"1.51370.1","SERVER-WEBAPP Fortinet FortiOS SSL VPN web portal directory traversal attempt",545960
-"CVE-2019-3398",Firepower,IPS,"1.50168.1","SERVER-WEBAPP Atlassian Confluence Data Center and Server directory traversal attempt",541281
-"CVE-2019-19781",Firepower,IPS,"1.52512.2","SERVER-WEBAPP Citrix ADC and Gateway arbitrary code execution attempt",321318
-"CVE-2019-19781",Firepower,IPS,"1.52603.1","SERVER-WEBAPP Citrix ADC and Gateway arbitrary code execution attempt",321318
-"CVE-2019-19781",Firepower,IPS,"1.52512.2","SERVER-WEBAPP Citrix ADC and Gateway arbitrary code execution attempt",311195
-"CVE-2019-19781",Firepower,IPS,"1.52603.1","SERVER-WEBAPP Citrix ADC and Gateway arbitrary code execution attempt",311195
-"CVE-2019-19781",Modsecurity,WAF,930100,"Path Traversal Attack (/../)",311195
-"CVE-2019-19781",Modsecurity,WAF,930110,"Path Traversal Attack (/../)",311195
-"CVE-2019-19781",Modsecurity,WAF,930100,"Path Traversal Attack (/../)",321318
-"CVE-2019-19781",Modsecurity,WAF,930110,"Path Traversal Attack (/../)",321318
-"CVE-2019-3398",Modsecurity,WAF,930100,"Path Traversal Attack (/../)",541281
-"CVE-2019-3398",Modsecurity,WAF,930110,"Path Traversal Attack (/../)",541281
-"CVE-2019-3398",Modsecurity,WAF,944110,"Remote Command Execution: Java process spawn (CVE-2017-9805)",541281
-"CVE-2019-3398",Modsecurity,WAF,944250,"Remote Command Execution: Suspicious Java method detected",541281
-"CVE-2018-13379",Modsecurity,WAF,930100,"Path Traversal Attack (/../)",545960
-"CVE-2018-13379",Modsecurity,WAF,930110,"Path Traversal Attack (/../)",545960
-"CVE-2020-10189",Modsecurity,WAF,930100,"Path Traversal Attack (/../)",752616
-"CVE-2020-10189",Modsecurity,WAF,930110,"Path Traversal Attack (/../)",752616
-"CVE-2019-19781",Tippingpoint,IPS,36876,"HTTP: Citrix Application Delivery Controller (ADC) Directory Traversal Vulnerability",311195
-"CVE-2019-19781",Tippingpoint,IPS,36876,"HTTP: Citrix Application Delivery Controller (ADC) Directory Traversal Vulnerability",321318
-"CVE-2019-3398",Tippingpoint,IPS,36860,"HTTP: Atlassian Confluence Server Directory Traversal Vulnerability",541281
-"CVE-2018-13379",Tippingpoint,IPS,36087,"HTTP: Fortinet FortiOS lang Directory Traversal Vulnerability",545960
-"CVE-2019-11510",Tippingpoint,IPS,36089,"HTTP: Pulse Secure Pulse Connect Secure Directory Traversal Vulnerability",575541
-"CVE-2020-10189",Tippingpoint,IPS,37355,"HTTP: Zoho ManageEngine Desktop Central mdmLogUploader Directory Traversal Vulnerability",752616
+cve,vendor,engine,id,name
+"CVE-2019-19781",Checkpoint,IPS,"asm_dynamic_prop_CVE_2019_19781","Citrix Multiple Products Directory Traversal (CVE-2019-19781)"
+"CVE-2019-19781",Checkpoint,IPS,"asm_dynamic_prop_CVE_2019_19781","Citrix Multiple Products Directory Traversal (CVE-2019-19781)"
+"CVE-2019-0604",Checkpoint,AV,0F16F435A,"Generic.Win32.Generic.TC.ipc"
+"CVE-2019-3398",Checkpoint,IPS,"asm_dynamic_prop_DIR_TRAV_URL","Web Servers Malicious URL Directory Traversal"
+"CVE-2018-13379",Checkpoint,IPS,"asm_dynamic_prop_CVE_2018_13379","Fortinet FortiOS SSL VPN Directory Traversal (CVE-2018-13379)"
+"CVE-2019-11510",Checkpoint,IPS,"asm_dynamic_prop_CVE_2019_11510","Pulse Connect Secure File Disclosure (CVE-2019-11510)"
+"CVE-2020-10189",Checkpoint,IPS,"asm_dynamic_prop_CVE_2020_10189","Zoho ManageEngine Remote Code Execution (CVE-2020-10189)"
+"CVE-2019-0604",Fortigate,AV,7512603,"Riskware/Generic_PUA_BG"
+"CVE-2019-0604",Fortigate,IPS,47918,"applications3: MS.SharePoint.CVE-2019-0604.Remote.Code.Execution"
+"CVE-2020-0688",Fortigate,IPS,48765,"applications3: MS.Exchange.Validation.Key.ViewState.Remote.Code.Execution"
+"CVE-2019-11510",Fortigate,IPS,48342,"applications3: Pulse.Secure.SSL.VPN.HTML5.Information.Disclosure"
+"CVE-2018-13379",Fortigate,IPS,48321,"applications3: FortiOS.SSL.VPN.Web.Portal.Pathname.Information.Disclosure"
+"CVE-2019-3398",Fortigate,IPS,47983,"applications3: Confluence.downloadallattachments.Resource.Path.Traversal"
+"CVE-2019-19781",Fortigate,IPS,48653,"applications3: Citrix.Application.Delivery.Controller.VPNs.Directory.Traversal"
+"CVE-2019-19781",Fortigate,IPS,48653,"applications3: Citrix.Application.Delivery.Controller.VPNs.Directory.Traversal"
+"CVE-2020-0688",Fortiweb,WAF,090501065,"Known Exploits"
+"CVE-2020-10189",Fortiweb,WAF,090501069,"Known Exploits"
+"CVE-2019-11510",Fortiweb,WAF,050180003,"Generic Attacks"
+"CVE-2018-13379",Fortiweb,WAF,050180003,"Generic Attacks"
+"CVE-2019-3398",Fortiweb,WAF,090501108,"Known Exploits"
+"CVE-2019-19781",Fortiweb,WAF,090501033,"Known Exploits"
+"CVE-2019-19781",Fortiweb,WAF,090501033,"Known Exploits"
+"CVE-2020-0688",Snort,IPS,"1.53347.2","SERVER-WEBAPP Microsoft Exchange Control Panel remote code execution attempt"
+"CVE-2020-0688",Snort,IPS,"1.53383.1","SERVER-WEBAPP Microsoft Exchange Control Panel remote code execution attempt"
+"CVE-2020-0688",Snort,IPS,"1.2029540.3","ET WEB_SPECIFIC_APPS Possible Attempted Microsoft Exchange RCE (CVE-2020-0688)"
+"CVE-2020-10189",Snort,IPS,"1.53435.1","SERVER-WEBAPP Zoho ManageEngine Desktop Central directory traversal attempt"
+"CVE-2019-11510",Snort,IPS,"1.51288.2","SERVER-WEBAPP Pulse Secure SSL VPN arbitrary file read attempt"
+"CVE-2019-11510",Snort,IPS,"1.51289.1","SERVER-WEBAPP Pulse Secure SSL VPN directory traversal attempt"
+"CVE-2018-13379",Snort,IPS,"1.51370.1","SERVER-WEBAPP Fortinet FortiOS SSL VPN web portal directory traversal attempt"
+"CVE-2018-13379",Snort,IPS,"1.2027883.2","ET EXPLOIT FortiOS SSL VPN - Information Disclosure (CVE-2018-13379)"
+"CVE-2019-3398",Snort,IPS,"1.50168.1","SERVER-WEBAPP Atlassian Confluence Data Center and Server directory traversal attempt"
+"CVE-2019-19781",Snort,IPS,"1.52512.2","SERVER-WEBAPP Citrix ADC and Gateway arbitrary code execution attempt"
+"CVE-2019-19781",Snort,IPS,"1.52603.1","SERVER-WEBAPP Citrix ADC and Gateway arbitrary code execution attempt"
+"CVE-2019-19781",Snort,IPS,"1.2029206.3","ET EXPLOIT Possible Citrix Application Delivery Controller Arbitrary Code Execution Attempt (CVE-2019-19781)"
+"CVE-2019-19781",Snort,IPS,"1.52512.2","SERVER-WEBAPP Citrix ADC and Gateway arbitrary code execution attempt"
+"CVE-2019-19781",Snort,IPS,"1.52603.1","SERVER-WEBAPP Citrix ADC and Gateway arbitrary code execution attempt"
+"CVE-2019-19781",Snort,IPS,"1.2029206.3","ET EXPLOIT Possible Citrix Application Delivery Controller Arbitrary Code Execution Attempt (CVE-2019-19781)"
+"CVE-2019-19781",Snort,IPS,"1.2029255.3","ET EXPLOIT Possible Citrix Application Delivery Controller Arbitrary Code Execution Attempt (CVE-2019-19781) M2"
+"CVE-2020-0688",Paloalto,IPS,57766,"Microsoft Exchange Remote Code Execution Vulnerability"
+"CVE-2019-11510",Paloalto,IPS,30844,"HTTP Directory Traversal Request Attempt"
+"CVE-2018-13379",Paloalto,IPS,30844,"HTTP Directory Traversal Request Attempt"
+"CVE-2019-3398",Paloalto,IPS,55567,"Atlassian Confluence Path Traversal Vulnerability"
+"CVE-2019-19781",Paloalto,IPS,57497,"Citrix Application Delivery Controller And Gateway Directory Traversal Vulnerability"
+"CVE-2019-19781",Paloalto,IPS,57497,"Citrix Application Delivery Controller And Gateway Directory Traversal Vulnerability"
+"CVE-2019-19781",F5,WAF,200004998,"Citrix NetScaler NSC_USER Remote Code Execution"
+"CVE-2019-19781",F5,WAF,200007011,"Directory Traversal attempt ""../"" (Header)"
+"CVE-2019-19781",F5,WAF,200007029,"Directory Traversal attempt ""../"" (URI)"
+"CVE-2019-19781",F5,WAF,200101550,"Directory Traversal attempt (Content)"
+"CVE-2019-19781",F5,WAF,200010036,"(GHDB) Smb.conf access"
+"CVE-2019-3398",F5,WAF,200000190,"Directory Traversal attempt ""../../"" (Parameter)"
+"CVE-2019-3398",F5,WAF,200003443,"Java code injection - Runtime.getRuntime (Parameter)"
+"CVE-2019-3398",F5,WAF,200004048,"ASP/JSP injection attempt ( <% )"
+"CVE-2019-3398",F5,WAF,200004161,"PHP injection attempt (exec)"
+"CVE-2019-3398",F5,WAF,200007016,"Directory Traversal attempt ""../"" (Parameter)"
+"CVE-2019-3398",F5,WAF,200101550,"Directory Traversal attempt (Content)"
+"CVE-2018-13379",F5,WAF,200000190,"Directory Traversal attempt ""../../"" (Parameter)"
+"CVE-2019-11510",F5,WAF,200003056,"""/etc"" execution attempt (URI)"
+"CVE-2020-0688",F5,WAF,200104091,"Microsoft Exchange __VIEWSTATE Predictable Key"
+"CVE-2019-0604",F5,WAF,200004562,"SharePoint ItemPicker Unsafe Deserialization"
+"CVE-2019-19781",Mcafee,IPS,0x40200c00,"HTTP: CGI Escape Character Directory Traversal"
+"CVE-2019-19781",Mcafee,IPS,0x4515b100,"HTTP: CGI Escape Character Directory Traversal II"
+"CVE-2019-19781",Mcafee,IPS,0x45272800,"HTTP: Citrix ADC Arbitrary Code Execution Vulnerability (CVE-2019-19781)"
+"CVE-2019-19781",Mcafee,IPS,0x40200c00,"HTTP: CGI Escape Character Directory Traversal"
+"CVE-2019-19781",Mcafee,IPS,0x45272800,"HTTP: Citrix ADC Arbitrary Code Execution Vulnerability (CVE-2019-19781)"
+"CVE-2018-13379",Mcafee,IPS,0x45274900,"HTTP: FortiOS SSL VPN Arbitrary File Read Vulnerability (CVE-2018-13379)"
+"CVE-2019-11510",Mcafee,IPS,0x40200c00,"HTTP: CGI Escape Character Directory Traversal"
+"CVE-2019-11510",Mcafee,IPS,0x4020af00,"HTTP: Attempt to Read Password File"
+"CVE-2019-19781",Forcepoint,IPS,,"HTTP_CRL-Citrix-Path-Traversal-CVE-2019-19781"
+"CVE-2019-19781",Forcepoint,IPS,,"HTTP_CRL-Citrix-Path-Traversal-CVE-2019-19781"
+"CVE-2019-0604",Forcepoint,AV,,"File_Malware-Blocked"
+"CVE-2019-3398",Forcepoint,IPS,,"HTTP_CSU-Dot-Dot-Slash-Dot-Dot-Slash-Dot-Dot-Directory-Traversal"
+"CVE-2018-13379",Forcepoint,IPS,,"HTTP_CSU-Dot-Dot-Slash-Dot-Dot-Slash-Dot-Dot-Directory-Traversal"
+"CVE-2019-11510",Forcepoint,IPS,,"HTTP_CSU-Pulse-Secure-SSL-VPN-Pre-Auth-Arbitrary-File-Reading"
+"CVE-2020-10189",Forcepoint,IPS,,"HTTP_CRL-Manageengine-Desktop-Central-Java-Deserialization"
+"CVE-2020-0688",Forcepoint,IPS,,"HTTP_CRL-Microsoft-Exchange-Validation-Key-Remote-Code-Execution"
+"CVE-2019-0604",Forcepoint,IPS,,"HTTP_CSU-Microsoft-SharePoint-Remote-Code-Execution"
+"CVE-2019-3398",Citrix,WAF,999774,"web-misc atlassian confluence or data center - downloadallattachments path traversal vulnerability (cve-2019-3398)"
+"CVE-2019-11510",Citrix,WAF,1122,"web-misc /etc/passwd"
+"CVE-2020-10189",Citrix,WAF,999651,"web-misc zoho manageengine desktop central prior to 10.0.479 - unauthenticated arbitrary file upload vuln (cve-2020-10189)"
+"CVE-2020-0688",Citrix,WAF,999653,"web-misc microsoft exchange server - validation key remote code execution vulnerability (cve-2020-0688)"
+"CVE-2019-0604",Firepower,AV,,"Auto.E4E05C.231541.in02"
+"CVE-2019-0604",Firepower,IPS,"1.55862.2","SERVER-WEBAPP Microsoft SharePoint EntityInstanceIdEncoder remote code execution attempt"
+"CVE-2020-0688",Firepower,IPS,"1.53382.1","SERVER-WEBAPP Microsoft Exchange Control Panel static viewstate key use attempt"
+"CVE-2020-0688",Firepower,IPS,"1.53383.1","SERVER-WEBAPP Microsoft Exchange Control Panel remote code execution attempt"
+"CVE-2020-0688",Firepower,IPS,"1.53347.2","SERVER-WEBAPP Microsoft Exchange Control Panel remote code execution attempt"
+"CVE-2020-10189",Firepower,IPS,"1.53435.1","SERVER-WEBAPP Zoho ManageEngine Desktop Central directory traversal attempt"
+"CVE-2019-11510",Firepower,IPS,"1.51288.2","SERVER-WEBAPP Pulse Secure SSL VPN arbitrary file read attempt"
+"CVE-2019-11510",Firepower,IPS,"1.51289.1","SERVER-WEBAPP Pulse Secure SSL VPN directory traversal attempt"
+"CVE-2018-13379",Firepower,IPS,"1.51370.1","SERVER-WEBAPP Fortinet FortiOS SSL VPN web portal directory traversal attempt"
+"CVE-2019-3398",Firepower,IPS,"1.50168.1","SERVER-WEBAPP Atlassian Confluence Data Center and Server directory traversal attempt"
+"CVE-2019-19781",Firepower,IPS,"1.52512.2","SERVER-WEBAPP Citrix ADC and Gateway arbitrary code execution attempt"
+"CVE-2019-19781",Firepower,IPS,"1.52603.1","SERVER-WEBAPP Citrix ADC and Gateway arbitrary code execution attempt"
+"CVE-2019-19781",Firepower,IPS,"1.52512.2","SERVER-WEBAPP Citrix ADC and Gateway arbitrary code execution attempt"
+"CVE-2019-19781",Firepower,IPS,"1.52603.1","SERVER-WEBAPP Citrix ADC and Gateway arbitrary code execution attempt"
+"CVE-2019-19781",Modsecurity,WAF,930100,"Path Traversal Attack (/../)"
+"CVE-2019-19781",Modsecurity,WAF,930110,"Path Traversal Attack (/../)"
+"CVE-2019-19781",Modsecurity,WAF,930100,"Path Traversal Attack (/../)"
+"CVE-2019-19781",Modsecurity,WAF,930110,"Path Traversal Attack (/../)"
+"CVE-2019-3398",Modsecurity,WAF,930100,"Path Traversal Attack (/../)"
+"CVE-2019-3398",Modsecurity,WAF,930110,"Path Traversal Attack (/../)"
+"CVE-2019-3398",Modsecurity,WAF,944110,"Remote Command Execution: Java process spawn (CVE-2017-9805)"
+"CVE-2019-3398",Modsecurity,WAF,944250,"Remote Command Execution: Suspicious Java method detected"
+"CVE-2018-13379",Modsecurity,WAF,930100,"Path Traversal Attack (/../)"
+"CVE-2018-13379",Modsecurity,WAF,930110,"Path Traversal Attack (/../)"
+"CVE-2020-10189",Modsecurity,WAF,930100,"Path Traversal Attack (/../)"
+"CVE-2020-10189",Modsecurity,WAF,930110,"Path Traversal Attack (/../)"
+"CVE-2019-19781",Tippingpoint,IPS,36876,"HTTP: Citrix Application Delivery Controller (ADC) Directory Traversal Vulnerability"
+"CVE-2019-19781",Tippingpoint,IPS,36876,"HTTP: Citrix Application Delivery Controller (ADC) Directory Traversal Vulnerability"
+"CVE-2019-3398",Tippingpoint,IPS,36860,"HTTP: Atlassian Confluence Server Directory Traversal Vulnerability"
+"CVE-2018-13379",Tippingpoint,IPS,36087,"HTTP: Fortinet FortiOS lang Directory Traversal Vulnerability"
+"CVE-2019-11510",Tippingpoint,IPS,36089,"HTTP: Pulse Secure Pulse Connect Secure Directory Traversal Vulnerability"
+"CVE-2020-10189",Tippingpoint,IPS,37355,"HTTP: Zoho ManageEngine Desktop Central mdmLogUploader Directory Traversal Vulnerability"
