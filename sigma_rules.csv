@@ -1,0 +1,13 @@
+﻿sigma_id,sigma_title
+3124,Script File Execution via WScript or CScript Tool
+8834,Persistence by Adding a User to Local Administrator Group
+8694,TCP Connection Creating via PowerShell Script
+7402,Pass the Key with Rubeus
+6769,Suspicious RC4 Encrypted Kerberos Service Ticket Request
+5629,Kerberoasting with Rubeus
+4654,Code Execution via Microsoft Build Engine
+4615,Suspicious Credential Vault Client Library Load
+6516, Execution Through Module Load via PowerShell
+4737,Symmetric Cryptography Encryptor and Decryptor Utilization via PowerShell
+3707,Execution of C# Compiler
+4155,Suspicious DISM Core Framework Portable Executable Load
