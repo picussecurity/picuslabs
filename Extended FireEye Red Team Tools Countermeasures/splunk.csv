@@ -1,0 +1,13 @@
+sigma_id,sigma_title,Splunk
+"3124","Script File Execution via WScript or CScript Tool","(source=""WinEventLog:Security"" EventCode=""4688"" (New_Process_Name=""*\\cscript.exe"" OR New_Process_Name=""*\\wscript.exe"") (Process_Command_Line=""*.vbs*"" OR Process_Command_Line=""*.js*"" OR Process_Command_Line=""*//E:jscript*"" OR Process_Command_Line=""*//E:vbscript*""))"
+"8834","Persistence by Adding a User to Local Administrator Group","(source=""WinEventLog:Security"" EventCode=""4732"" (Group_Name=""Administrators"" OR Security_ID=""S-1-5-32-544""))"
+"8694","TCP Connection Creating via PowerShell Script","(source=""WinEventLog:Microsoft-Windows-PowerShell/Operational"" EventCode=""4104"" (Message=""*Net.Sockets.TcpClient(*, *)*"" OR Message=""*Net.Sockets.TcpListener(*, *)*""))"
+"7402","Pass the Key with Rubeus","(source=""WinEventLog:Security"" EventCode=""4688"" (Process_Command_Line=""* asktgt */user:* /ptt*""))"
+"6769","Suspicious RC4 Encrypted Kerberos Service Ticket Request","(source=""WinEventLog:Security"" (EventCode=""4769"" Ticket_Encryption_Type=""0x17"" Ticket_Options=""0x40810000"" Failure_Code=""0x0"") NOT ((Service_Name=""*$"" OR Service_Name=""krbtgt"") Account_Name=""*$@*""))"
+"5629","Kerberoasting with Rubeus","(source=""WinEventLog:Security"" EventCode=""4688"" (Process_Command_Line=""*kerberoast*""))"
+"4654","Code Execution via Microsoft Build Engine","(source=""WinEventLog:Security"" EventCode=""4688"" New_Process_Name=""*\\MsBuild.exe"")"
+"4615","Suspicious Credential Vault Client Library Load","(source=""WinEventLog:Microsoft-Windows-Sysmon/Operational"" (EventCode=""7"" ImageLoaded=""*\\vaultcli.dll"") NOT ((Image=""*\\vaultcmd.exe"" OR Image=""*\\explorer.exe"")))"
+"6516","Execution Through Module Load via PowerShell","(source=""WinEventLog:Microsoft-Windows-PowerShell/Operational"" (EventCode=""4104"" OR EventCode=""4103"") Message=""*Reflection*"" Message=""*Assembly*"" Message=""*Load*"")"
+"4737","Symmetric Cryptography Encryptor and Decryptor Utilization via PowerShell","(source=""WinEventLog:Microsoft-Windows-PowerShell/Operational"" (EventCode=""4103"" OR EventCode=""4104"") Message=""*Security*"" Message=""*Cryptography*"" (Message=""*CreateDecryptor*"" OR Message=""*CreateEncryptor*""))"
+"3707","Execution of C# Compiler","(source=""WinEventLog:Security"" EventCode=""4688"" New_Process_Name=""*\\csc.exe"")"
+"4155","Suspicious DISM Core Framework Portable Executable Load","(source=""WinEventLog:Microsoft-Windows-Sysmon/Operational"" (EventCode=""7"" (ImageLoaded=""*\\DismCore.dll"")) NOT ((ImageLoaded=""*C:\\Windows\\System32\\Dism\\DismCore.dll*"" OR ImageLoaded=""*C:\\Windows\\SysWOW64\\Dism\\DismCore.dll*"")))"
