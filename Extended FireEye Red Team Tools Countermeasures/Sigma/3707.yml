@@ -1,0 +1,25 @@
+title: Execution of C# Compiler
+status: experimental
+description: Detects execution of C# compiler (csc.exe). Some payloads are dropped as source code. This technique is commonly utilized for defense evasion.
+author: Picus Security
+references:
+   - https://attack.mitre.org/techniques/T1500/
+   - https://attack.mitre.org/tactics/TA0005/
+   - https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/command-line-building-with-csc-exe
+logsource:
+    product: windows
+    service: security
+    definition1: 'Requirements: Group Policy : Computer Configuration\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Detailed Tracking\Audit Process Creation'
+    definition2: 'Requirements: Group Policy : Computer Configuration\ Administrative Templates\ System\ Audit Process Creation\ Include Command Line'
+detection:
+   selection:
+        EventID: 4688
+        NewProcessName: '*\csc.exe'
+   condition: selection
+falsepositives:
+    - Software installation
+level: medium
+tags:
+    - attack.defense_evasion
+    - attack.t1500
+    - attack.ta0005

@@ -1,0 +1,33 @@
+title: Suspicious RC4 Encrypted Kerberos Service Ticket Request
+status: stable
+description: Detects the suspicious RC4 encrypted kerberos service ticket requests which are normally utilized by services associated with SPNs. Adversaries crack dumped tickets via brute forcing to gather cleartext credentials.
+author: Picus Security
+references:
+   - https://www.trustedsec.com/blog/art_of_kerberoast/
+   - https://attack.mitre.org/techniques/T1558/003/
+   - https://attack.mitre.org/tactics/TA0006/
+logsource:
+    product: windows
+    service: security
+    definition: 'Requirements: Group Policy : Computer Configuration\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Account Logon\Audit Kerberos Service Ticket Operations'
+detection:
+    id:
+        EventID: 4769
+    ticket:
+        TicketEncryptionType: '0x17'
+        TicketOptions: '0x40810000'
+    status:
+        FailureCode: '0x0'   
+    service_machine:
+        ServiceName: 
+            - '*$'
+            - 'krbtgt'
+        AccountName: '*$@*'
+    condition: id and ticket and status and not service_machine
+falsepositives:
+    - Legacy applications and systems 
+level: high
+tags:
+    - attack.credential_access
+    - attack.t1558.003
+    - attack.ta0006

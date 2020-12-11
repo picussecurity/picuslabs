@@ -1,0 +1,26 @@
+title: TCP Connection Creating via PowerShell Script
+status: stable
+description: Detects the attempt to connections for TCP network services via of PowerShell scripts. This technique is commonly utilized for connection to the target IP to create a Proxy.
+author: Picus Security
+references:
+   - https://attack.mitre.org/techniques/T1090/
+   - https://attack.mitre.org/tactics/TA0011/
+logsource:
+    product: windows
+    service: powershell/operational
+    definition1: 'Requirements: Group Policy : Computer Configuration\Administrative Templates\Windows Components\Windows PowerShell\Turn On PowerShell Script Block Logging'
+detection:
+    selection:
+        EventID: 4104
+        Message|contains:
+        - 'Net.Sockets.TcpClient(*, *)'
+        - 'Net.Sockets.TcpListener(*, *)'
+    condition: selection
+falsepositives:
+    - Legitimate administrative activities
+    - Administrative tools/scripts
+level: low
+tags:
+    - attack.command_and_control
+    - attack.t1090
+    - attack.ta0011

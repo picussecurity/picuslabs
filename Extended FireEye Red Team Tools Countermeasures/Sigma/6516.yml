@@ -1,0 +1,29 @@
+title: Execution Through Module Load via PowerShell
+status: stable
+description: Detects the attempt to load DLLs via the Windows module loader that utilized by PowerShell. Adversaries can use this functionality to execute arbitrary code on a system.
+author: Picus Security
+references:
+    - https://attack.mitre.org/techniques/T1129/
+    - https://attack.mitre.org/tactics/TA0002/
+logsource:
+    product: windows
+    service: powershell/operational
+    definition1: 'Requirements: Group Policy : Computer Configuration\Administrative Templates\Windows Components\Windows PowerShell\Turn On Module Logging'
+    definition2: 'Requirements: Group Policy : Computer Configuration\Administrative Templates\Windows Components\Windows PowerShell\Turn On PowerShell Script Block Logging'
+detection:
+    selection:
+        EventID: 
+            - 4104
+            - 4103
+        Message|contains|all:
+            - '*Reflection*'
+            - '*Assembly*'
+            - '*Load*'
+    condition: selection
+falsepositives: 
+    - Unlikely, legitimate use in red teaming activities
+level: high
+tags:
+    - attack.execution
+    - attack.t1129
+    - attack.ta0002

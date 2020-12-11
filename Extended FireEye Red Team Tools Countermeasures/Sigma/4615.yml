@@ -1,0 +1,26 @@
+title: Suspicious Credential Vault Client Library Load
+status: stable
+description: Detects the load of Credential Vault Client Library DLL (vaultcli.dll) that is normally utilized by vaultcmd.exe and Control Panel-Credential Manager. Adversaries utilize this library to gather stored credentials.
+author: Picus Security
+references:
+   - https://attack.mitre.org/techniques/T1003/
+   - https://attack.mitre.org/tactics/TA0006/
+logsource:
+    product: windows
+    service: sysmon
+detection:
+    library:
+        EventID: 7
+        ImageLoaded: '*\vaultcli.dll'
+    process:
+        Image: 
+          - '*\vaultcmd.exe'    
+          - '*\explorer.exe'
+    condition: library and not process
+falsepositives:
+    - Legitimate applications that are managed by administrators may utilize this library
+level: medium
+tags:
+    - attack.credential_access
+    - attack.ta0006
+    - attack.t1003

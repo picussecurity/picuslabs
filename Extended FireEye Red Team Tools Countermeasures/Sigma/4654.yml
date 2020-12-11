@@ -1,0 +1,27 @@
+title: Code Execution via Microsoft Build Engine
+status: stable
+description: Detects the suspicious Microsoft Build Engine (MsBuild.exe) process execution which normally not observed in operation environment. Adversaries can use MSBuild to proxy execution of code through a trusted Windows utility.
+references:
+   - https://attack.mitre.org/techniques/T1127/
+   - https://attack.mitre.org/tactics/TA0002/
+   - https://attack.mitre.org/tactics/TA0005/
+   - https://lolbas-project.github.io/lolbas/Binaries/Msbuild/
+logsource:
+    product: windows
+    service: security
+    definition1: 'Requirements: Group Policy : Computer Configuration\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Detailed Tracking\Audit Process Creation'
+    definition2: 'Requirements: Group Policy : Computer Configuration\ Administrative Templates\ System\ Audit Process Creation\ Include Command Line'
+detection:
+    selection:
+        EventID: 4688
+        NewProcessName: '*\MsBuild.exe'
+    condition: selection
+falsepositives:
+    - Process might be observed on software development environment
+level: high
+tags:
+    - attack.defense_evasion
+    - attack.execution
+    - attack.t1127
+    - attack.ta0002
+    - attack.ta0005

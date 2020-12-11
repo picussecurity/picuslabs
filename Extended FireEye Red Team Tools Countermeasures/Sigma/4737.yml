@@ -1,0 +1,32 @@
+title: Symmetric Cryptography Encryptor and Decryptor Utilization via PowerShell
+status: stable
+description: Detects the attempt of loading symmetric cryptography encyption and decryption methods which are imported from .NET/System.Security.Cryptography namespace via PowerShell. This methods are utilized when adversaries want to decrypt their payload or to encrypt the data.
+author: Picus Security
+references:
+    - https://attack.mitre.org/techniques/T1140/
+    - https://attack.mitre.org/tactics/TA0005/
+    - https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography?view=netcore-3.1
+logsource:
+    product: windows
+    service: powershell/operational
+    definition: 'Requirements: Group Policy : Computer Configuration\Administrative Templates\Windows Components\Windows PowerShell\Turn On Module Logging'
+detection:
+    selection:
+        EventID: 
+            - 4103
+            - 4104
+        Message|contains|all:
+            - 'Security'
+            - 'Cryptography'
+    functions:
+        Message|contains:
+            - 'CreateDecryptor'
+            - 'CreateEncryptor'
+    condition: selection and functions
+falsepositives: 
+    - Unknown
+level: high
+tags:
+    - attack.defense_evasion
+    - attack.t1140
+    - attack.ta0005

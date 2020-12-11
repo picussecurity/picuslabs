@@ -1,0 +1,26 @@
+title: Kerberoasting with Rubeus 
+status: experimental
+description: Detects the attempt to request Kerberos (TGS) service tickets for any SPN via Rubeus tool. This technique is commonly utilized for credential access.
+author: Picus Security
+references:
+   - https://www.tarlogic.com/en/blog/how-to-attack-kerberos/
+   - https://attack.mitre.org/techniques/T1208/
+   - https://attack.mitre.org/tactics/TA0006/
+logsource:
+    product: windows
+    service: security
+    definition1: 'Requirements: Group Policy : Computer Configuration\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Detailed Tracking\Audit Process Creation'
+    definition2: 'Requirements: Group Policy : Computer Configuration\ Administrative Templates\ System\ Audit Process Creation\ Include Command Line'
+detection:
+    selection:
+        EventID: 4688
+        ProcessCommandLine: 
+            - '*kerberoast*'
+    condition: selection
+falsepositives:
+    - Unlikely, legitimate use in red teaming activities.
+level: high
+tags:
+    - attack.credential_access
+    - attack.t1208
+    - attack.ta0006

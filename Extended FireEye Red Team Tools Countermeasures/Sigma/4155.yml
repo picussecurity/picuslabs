@@ -1,0 +1,34 @@
+title: Suspicious DISM Core Framework Portable Executable Load
+status: stable
+description: Detects the load of DISM Core Framework DLL (DismCore.dll) that is normally utilized by Dism Image Servicing Utility (dism.exe). Adversaries load their malicious files by hijacking dll search order of this executable.
+author: Picus Security
+references:
+   - https://attack.mitre.org/techniques/T1574/001/
+   - https://attack.mitre.org/tactics/TA0003/
+   - https://attack.mitre.org/tactics/TA0004/
+   - https://attack.mitre.org/tactics/TA0003/
+   - https://github.com/fireeye/DueDLLigence
+logsource:
+    product: windows
+    service: sysmon
+detection:
+    library:
+        EventID: 7
+        ImageLoaded: 
+          - '*\DismCore.dll'
+    legit_library:
+        ImageLoaded|contains:
+          - 'C:\Windows\System32\Dism\DismCore.dll'
+          - 'C:\Windows\SysWOW64\Dism\DismCore.dll'
+    condition: library and not legit_library
+falsepositives:
+    - None
+level: high
+tags:
+    - attack.persistence
+    - attack.privilege_escalation
+    - attack.defense_evasion
+    - attack.ta0003
+    - attack.ta0004
+    - attack.ta0005
+    - attack.t1574.001

@@ -1,0 +1,26 @@
+title: Pass the Key with Rubeus 
+status: experimental
+description: Detects the attempt to request kerberos tickets of user via Rubeus tool. This technique is commonly utilized for lateral movement.
+author: Picus Security
+references:
+   - https://www.tarlogic.com/en/blog/how-to-attack-kerberos/
+   - https://attack.mitre.org/techniques/T1075/
+   - https://attack.mitre.org/tactics/TA0008/
+logsource:
+    product: windows
+    service: security
+    definition1: 'Requirements: Group Policy : Computer Configuration\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Detailed Tracking\Audit Process Creation'
+    definition2: 'Requirements: Group Policy : Computer Configuration\ Administrative Templates\ System\ Audit Process Creation\ Include Command Line'
+detection:
+    selection:
+        EventID: 4688
+        ProcessCommandLine: 
+            - '* asktgt */user:* /ptt*'
+    condition: selection
+falsepositives:
+    - Unlikely, legitimate use in red teaming activities.
+level: high
+tags:
+    - attack.lateral_movement
+    - attack.t1075
+    - attack.ta0008
