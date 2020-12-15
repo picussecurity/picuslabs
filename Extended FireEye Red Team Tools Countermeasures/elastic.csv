@@ -1,0 +1,12 @@
+sigma_id,sigma_title,elastic_lucene
+"3124","Script File Execution via WScript or CScript Tool","(winlog.channel:Security AND winlog.event_id:4688 AND process.executable:(*\\cscript.exe OR *\\wscript.exe) AND process.command_line:(*.vbs* OR *.js* OR *\/\/E\:jscript* OR *\/\/E\:vbscript*))"
+"8834","Persistence by Adding a User to Local Administrator Group","(winlog.channel:Security AND winlog.event_id:4732 AND (winlog.event_data.GroupName:Administrators OR group.name:Administrators OR winlog.event_data.SecurityID:S\-1\-5\-32\-544))"
+"8694","TCP Connection Creating via PowerShell Script","(winlog.channel:Microsoft\-Windows\-Powershell\/Operational AND winlog.event_id:4104 AND message:(*Net.Sockets.TcpClient* OR *Net.Sockets.TcpListener*))"
+"7402","Pass the Key with Rubeus","(winlog.channel:Security AND winlog.event_id:4688 AND process.command_line:(*asktgt* AND *user\:* AND *\/ptt*))"
+"5629","Kerberoasting with Rubeus","(winlog.channel:Security AND winlog.event_id:4688 AND process.command_line:(*kerberoast*))"
+"4654","Code Execution via Microsoft Build Engine ","(winlog.channel:Security AND winlog.event_id:4688 AND process.executable:*\\MsBuild.exe)"
+"4615","Suspicious Credential Vault Client Library Load","(winlog.channel:Microsoft\-Windows\-Sysmon\/Operational AND (winlog.event_id:7 AND file.path:*\\vaultcli.dll) AND (NOT (process.executable:(*\\vaultcmd.exe OR *\\explorer.exe))))"
+"6516","Execution Through Module Load via PowerShell","(winlog.channel:Microsoft\-Windows\-Powershell\/Operational  AND winlog.event_id:(4104 OR 4103) AND message:*Reflection* AND message:*Assembly* AND message:*Load*)"
+"4737","Symmetric Cryptography Encryptor and Decryptor Utilization via PowerShell","(winlog.channel:Microsoft\-Windows\-Powershell\/Operational  AND winlog.event_id:(4103 OR 4104) AND message:*Security* AND message:*Cryptography* AND message:(*CreateDecryptor* OR *CreateEncryptor*))"
+"3707","Execution of C# Compiler","(winlog.channel:Security AND winlog.event_id:4688 AND process.executable:*\\csc.exe)"
+"4155","Suspicious DISM Core Framework Portable Executable Load","(winlog.channel:Microsoft\-Windows\-Sysmon\/Operational AND (winlog.event_id:7 AND file.path:(*\\DismCore.dll)) AND (NOT (file.path:(*C\:\\Windows\\System32\\Dism\\DismCore.dll* OR *C\:\\Windows\\SysWOW64\\Dism\\DismCore.dll*))))"
