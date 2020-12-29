@@ -1,0 +1,11 @@
+﻿sigma_id,sigma_name,Splunk
+"5397","New Service Creation via Service Control Tool ","(source=""WinEventLog:Security"" EventCode=""4688"" New_Process_Name=""*\\sc.exe"" Process_Command_Line=""* create *"") "
+"7397","Hidden Adfind Tool Execution ","(source=""WinEventLog:Microsoft-Windows-Sysmon/Operational"" (EventCode=""1"" OriginalFileName=""Adfind.exe"") NOT (Image=""*\\Adfind.exe"")) "
+"6117","Security Products Discovery via WMIC Tool ","(source=""WinEventLog:Security"" EventCode=""4688"" New_Process_Name=""*\\WMIC.exe"" Process_Command_Line=""*wmic*"" Process_Command_Line=""*Win32_systemDriver*"" Process_Command_Line=""*get*"") "
+"2396","Suspicious EventCacheManager Scheduled Task Creation ","(source=""WinEventLog:Security"" EventCode=""4688"" New_Process_Name=""*\\schtasks.exe"" Process_Command_Line=""*create*"" Process_Command_Line=""*EventCacheManager*"" Process_Command_Line=""*Microsoft\\Windows\\SoftwareProtectionPlatform*"") "
+"3046","System Information Discovery via Systeminfo Utility","(source=""WinEventLog:Security"" EventCode=""4688"" New_Process_Name=""*\\systeminfo.exe"") "
+"3157","Remote Desktop Connection via Mstsc Tool","(source=""WinEventLog:Security"" EventCode=""4688"" New_Process_Name=""*\\mstsc.exe"" Process_Command_Line=""*mstsc* /v*"") "
+"3666","Network Configuration Discovery via Native Tools","(source=""WinEventLog:Security"" EventCode=""4688"" (New_Process_Name=""*\\nbtstat.exe"" OR New_Process_Name=""*\\arp.exe"" OR New_Process_Name=""*\\ipconfig.exe"" OR New_Process_Name=""*\\route.exe"")) "
+"4142","Information Collection about User","(source=""WinEventLog:Security"" EventCode=""4688"" New_Process_Name=""*\\whoami.exe"") "
+"5983","Stored Credentials Creation via Cmdkey","(source=""WinEventLog:Security"" EventCode=""4688"" New_Process_Name=""*\\cmdkey.exe"" (Process_Command_Line=""*generic*"" OR Process_Command_Line=""*add*"")) "
+"7321","RDP Authentication Bypass by Modifying AuthenticationLevelOverride Key Value in Registry","(source=""WinEventLog:Security"" EventCode=""4688"" New_Process_Name=""*\\reg.exe"" Process_Command_Line=""*add* *\\Software\\Microsoft\\Terminal Server Client* *AuthenticationLevelOverride*"") "
