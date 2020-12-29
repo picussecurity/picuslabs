@@ -1,0 +1,11 @@
+﻿sigma_id,sigma_name
+2396,Suspicious EventCacheManager Scheduled Task Creation
+3046,System Information Discovery via Systeminfo Utility
+3157,Remote Desktop Connection via Mstsc Tool
+3666,Network Configuration Discovery via Native Tools
+4142,Information Collection about User Group and Privileges for the Current User on the Local System
+5397,New Service Creation via Service Control Tool
+5983,Stored Credentials Creation via Cmdkey
+6117,Security Products Discovery via WMIC Tool
+7321,RDP Authentication Bypass by Modifying AuthenticationLevelOverride Key Value in Registry 
+7397,Hidden Adfind Tool Execution
