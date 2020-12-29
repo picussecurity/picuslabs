@@ -1,0 +1,27 @@
+title: RDP Authentication Bypass by Modifying AuthenticationLevelOverride Key Value in Registry 
+status: experimental
+description: Detects the attempt to modify registry value "AuthenticationLevelOverride" which mostly controls authentication requests via reg command. This technique is commonly utilized for persistency as OilRig Threat Group's usage in its campaigns.
+author: Picus Security
+references:
+   - https://attack.mitre.org/techniques/T1076/
+   - https://attack.mitre.org/tactics/TA0008/
+   - https://attack.mitre.org/groups/G0049/
+logsource:
+    product: windows
+    service: security
+    definition1: 'Requirements: Group Policy : Computer Configuration\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Detailed Tracking\Audit Process Creation'
+    definition2: 'Requirements: Group Policy : Computer Configuration\ Administrative Templates\ System\ Audit Process Creation\ Include Command Line'
+detection:
+    selection:
+        EventID: 4688
+        NewProcessName: '*\reg.exe'
+        ProcessCommandLine: '*add* *\Software\Microsoft\Terminal Server Client* *AuthenticationLevelOverride*'
+    condition: selection
+falsepositives:
+    - Legitimate administrative activity
+level: low
+tags:
+    - attack.persistence
+    - attack.t1076
+    - attack.ta0008
+    - attack.g0049

@@ -1,0 +1,29 @@
+title: Security Products Discovery via WMIC Tool
+status: stable
+description: Detects the attempt to discover processes, services and drivers via WMIC tool.This method is used by adversaries to shape their follow-on actions. 
+author: Picus Security
+references:
+   - https://attack.mitre.org/techniques/T1518/001/
+   - https://attack.mitre.org/tactics/TA0007/
+   - https://news.sophos.com/en-us/2020/12/21/how-sunburst-malware-does-defense-evasion/
+logsource:
+    product: windows
+    service: security
+    definition1: 'Requirements: Group Policy : Computer Configuration\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Detailed Tracking\Audit Process Creation'
+    definition2: 'Requirements: Group Policy : Computer Configuration\ Administrative Templates\ System\ Audit Process Creation\ Include Command Line'
+detection:
+    selection:
+        EventID: 4688
+        NewProcessName: '*\WMIC.exe'
+        ProcessCommandLine|contains|all: 
+            - 'wmic'
+            - 'Win32_systemDriver'
+            - 'get'
+    condition: selection
+falsepositives:
+    - Administrative tools/scripts
+level: medium
+tags:
+    - attack.discovery
+    - attack.t1518.001
+    - attack.ta0007

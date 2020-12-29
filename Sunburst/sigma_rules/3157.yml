@@ -1,0 +1,29 @@
+title: Remote Desktop Connection via Mstsc Tool
+status: experimental
+description: Detects the attempt to establish remote desktop connection via mstsc tool. Adversaries may use remote services to initially access and/or persist within a network.
+author: Picus Security
+references:
+   - https://attack.mitre.org/techniques/T1133/
+   - https://attack.mitre.org/tactics/TA0003/
+   - https://attack.mitre.org/tactics/TA0001/
+   - https://ss64.com/nt/mstsc.html
+logsource:
+    product: windows
+    service: security
+    definition1: 'Requirements: Group Policy : Computer Configuration\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Detailed Tracking\Audit Process Creation'
+    definition2: 'Requirements: Group Policy : Computer Configuration\ Administrative Templates\ System\ Audit Process Creation\ Include Command Line'
+detection:
+    selection:
+        EventID: 4688
+        NewProcessName: '*\mstsc.exe'
+        ProcessCommandLine: '*mstsc* /v*'
+    condition: selection
+falsepositives:
+    - Legitimate administrative activities
+level: low
+tags:
+    - attack.persistence
+    - attack.initial_access
+    - attack.t1133
+    - attack.ta0003
+    - attack.ta0001

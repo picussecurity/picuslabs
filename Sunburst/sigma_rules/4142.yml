@@ -1,0 +1,26 @@
+title: Information Collection about User, Group and Privileges for the Current User on the Local System
+status: stable
+description: Detects the attempt to display the user, group and privileges information for the current user via “whoami" command. This technique is commonly utilized for discovery.
+author: Picus Security
+references:
+   - https://attack.mitre.org/techniques/T1033/
+   - https://attack.mitre.org/tactics/TA0007/
+   - https://attack.mitre.org/groups/G0050/
+logsource:
+    product: windows
+    service: security
+    definition1: 'Requirements: Group Policy : Computer Configuration\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Detailed Tracking\Audit Process Creation'
+    definition2: 'Requirements: Group Policy : Computer Configuration\ Administrative Templates\ System\ Audit Process Creation\ Include Command Line'
+detection:
+    selection:
+        EventID: 4688
+        NewProcessName: '*\whoami.exe'
+    condition: selection
+falsepositives:
+    - Usual user activity
+level: high
+tags:
+    - attack.discovery
+    - attack.t1033
+    - attack.ta0007
+    - attack.g0050

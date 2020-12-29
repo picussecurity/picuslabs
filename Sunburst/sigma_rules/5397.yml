@@ -1,0 +1,29 @@
+title: New Service Creation via Service Control Tool
+status: stable
+description: Detects the attempt to create a new service via sc command. This technique is commonly utilized for privilege escalation and persistence.
+author: Picus Security
+references:
+   - https://attack.mitre.org/techniques/T1543/003/
+   - https://attack.mitre.org/tactics/TA0003/
+   - https://attack.mitre.org/tactics/TA0004/
+   - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/sc-create
+logsource:
+    product: windows
+    service: security
+    definition1: 'Requirements: Group Policy : Computer Configuration\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Detailed Tracking\Audit Process Creation'
+    definition2: 'Requirements: Group Policy : Computer Configuration\ Administrative Templates\ System\ Audit Process Creation\ Include Command Line'
+detection:
+    selection:
+        EventID: 4688
+        NewProcessName: '*\sc.exe'
+        ProcessCommandLine: '* create *'
+    condition: selection
+falsepositives:
+    - Legitimate administrative activities
+level: low
+tags:
+    - attack.privilege_escalation
+    - attack.persistence
+    - attack.t1543.003
+    - attack.ta0003
+    - attack.ta0004

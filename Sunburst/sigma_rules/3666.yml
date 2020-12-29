@@ -1,0 +1,35 @@
+title: Network Configuration Discovery via Native Tools
+status: stable
+description: Detects the execution of common tools that are used for getting details about the network configuration and settings of systems. Adversaries use these tools within close timeframe on discovery phase.
+references:
+   - https://attack.mitre.org/techniques/T1016/
+   - https://attack.mitre.org/tactics/TA0007/
+   - https://attack.mitre.org/software/S0102/
+   - https://attack.mitre.org/software/S0099/
+   - https://attack.mitre.org/software/S0100/
+   - https://attack.mitre.org/software/S0103/
+logsource:
+    product: windows
+    service: security
+    definition1: 'Requirements: Group Policy : Computer Configuration\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Detailed Tracking\Audit Process Creation'
+    definition2: 'Requirements: Group Policy : Computer Configuration\ Administrative Templates\ System\ Audit Process Creation\ Include Command Line'
+detection:
+    selection:
+        EventID: 4688
+        NewProcessName: 
+          - '*\nbtstat.exe'
+          - '*\arp.exe'
+          - '*\ipconfig.exe'
+          - '*\route.exe'
+    condition: selection
+falsepositives:
+    - Legitimate administrative activities
+level: low
+tags:
+    - attack.discovery
+    - attack.t1016
+    - attack.ta0007
+    - attack.s0102
+    - attack.s0099
+    - attack.s0100
+    - attack.s0103

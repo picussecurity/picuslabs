@@ -1,0 +1,30 @@
+title: Hidden Adfind Tool Execution
+status: stable
+description: Detects the execution of masked Adfind Tool to discovery. Adfind tool is used to gather information about the victim system. This method is utilized for the sake of evading defenses and observation.
+author: Picus Security
+references:
+   - https://attack.mitre.org/techniques/T1087/002/
+   - https://attack.mitre.org/techniques/T1036/005/
+   - https://attack.mitre.org/tactics/TA0005/
+   - https://attack.mitre.org/tactics/TA0007/
+   - http://www.joeware.net/freetools/tools/adfind/
+logsource:
+    product: windows
+    service: sysmon
+detection:
+    selection:
+        EventID: 1
+        OriginalFileName: 'Adfind.exe'
+    filter:
+        Image: '*\Adfind.exe'
+    condition: selection and not filter
+falsepositives:
+    - Unknown
+level: high
+tags:
+    - attack.discovery
+    - attack.defense_evasion
+    - attack.t1087.002
+    - attack.t1036.005
+    - attack.ta0007
+    - attack.ta0005

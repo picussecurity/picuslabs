@@ -1,0 +1,40 @@
+title: Stored Credentials Creation via Cmdkey
+status: experimental
+description: Detects the attempt to create stored credentials via cmdkey. This technique is commonly utilized for persistence as OilRig Threat Group's usage in its campaigns.
+author: Picus Security
+references:
+   - https://attack.mitre.org/techniques/T1078/
+   - https://attack.mitre.org/tactics/TA0005/
+   - https://attack.mitre.org/tactics/TA0003/
+   - https://attack.mitre.org/tactics/TA0004/
+   - https://attack.mitre.org/tactics/TA0001/   
+   - https://attack.mitre.org/groups/G0049/
+   - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cmdkey
+logsource:
+    product: windows
+    service: security
+    definition1: 'Requirements: Group Policy : Computer Configuration\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Detailed Tracking\Audit Process Creation'
+    definition2: 'Requirements: Group Policy : Computer Configuration\ Administrative Templates\ System\ Audit Process Creation\ Include Command Line'
+detection:
+    process:
+        EventID: 4688
+        NewProcessName: '*\cmdkey.exe'
+    parameter1:    
+        ProcessCommandLine: 
+          - '*generic*'
+          - '*add*'              
+    condition: process and parameter1
+falsepositives:
+    - Legitimate administrative activities
+level: low
+tags:
+    - attack.persistence
+    - attack.defense_evasion
+    - attack.privilege_escalation
+    - attack.initial_access
+    - attack.t1078
+    - attack.ta0001
+    - attack.ta0003
+    - attack.ta0004
+    - attack.ta0005
+    - attack.g0049

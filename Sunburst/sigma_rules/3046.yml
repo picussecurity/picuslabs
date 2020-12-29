@@ -1,0 +1,31 @@
+title: System Information Discovery via Systeminfo Utility
+status: experimental
+description: Detects the attempt to gather detailed configuration information about system via "systeminfo" utility. This technique is commonly utilized for discovery as OceanLotus and Turla/Waterbug Threat Group's usage in its campaigns.
+author: Picus Security
+references:
+   - https://attack.mitre.org/techniques/T1082/
+   - https://attack.mitre.org/tactics/TA0007/
+   - https://attack.mitre.org/groups/G0050/
+   - https://attack.mitre.org/groups/G0010/
+   - https://attack.mitre.org/software/S0096/
+   - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/systeminfo
+logsource:
+    product: windows
+    service: security
+    definition1: 'Requirements: Group Policy : Computer Configuration\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Detailed Tracking\Audit Process Creation'
+    definition2: 'Requirements: Group Policy : Computer Configuration\ Administrative Templates\ System\ Audit Process Creation\ Include Command Line'
+detection:
+    selection:
+        EventID: 4688
+        NewProcessName: '*\systeminfo.exe'
+    condition: selection
+falsepositives:
+    - Legitimate administrative activities
+level: low
+tags:
+    - attack.discovery
+    - attack.t1082
+    - attack.ta0007
+    - attack.g0010
+    - attack.g0050
+    - attack.s0096
