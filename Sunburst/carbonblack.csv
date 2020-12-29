@@ -1,0 +1,12 @@
+﻿author,rule_id,rule_name,feed_name,query
+"Picus Security","5397","New Service Creation via Service Control Tool ","-","(process_name:sc.exe AND cmdline:create)"
+"Carbon Black","4f475d3d-0074-411f-9c19-0f7e34b5dd14","Discovery - Renamed Adfind.exe Behaviors Detected","bit9advancedthreats","-"
+"Picus Security","6117","Security Products Discovery via WMIC Tool ","-","(process_name:wmic.exe AND cmdline:Win32_systemDriver cmdline:get)"
+"Picus Security","2396","Suspicious EventCacheManager Scheduled Task Creation ","-","(process_name:schtasks.exe AND cmdline:/create AND cmdline:EventCacheManager AND cmdline:Microsoft\\Windows\\SoftwareProtectionPlatform)"
+"Picus Security","3046","System Information Discovery via Systeminfo Utility","-","(process_name:systeminfo.exe)"
+"Picus Security","3157","Remote Desktop Connection via Mstsc Tool","-","(process_name:mstsc.exe AND cmdline:/v:)"
+"Carbon Black","565591","Discovery - System Owner/User Discovery #1","attackframework","-"
+"Picus Security","5983","Stored Credentials Creation via Cmdkey","-","(process_name:cmdkey.exe AND (cmdline:/generic: OR cmdline:/add:))"
+"Picus Security","7321","RDP Authentication Bypass by Modifying AuthenticationLevelOverride Key Value in Registry","-","(process_name:reg.exe AND cmdline:add AND cmdline:AuthenticationLevelOverride)"
+"Carbon Black","4978341a-5d03-4c36-a276-58d199f31474","Lateral Movement - Successful RDP Connection","bit9endpointvisibility","-"
+"Carbon Black","b795d40a-f573-494d-9980-14321dd746cf","Lateral Movement - Remote Desktop Protocol - Possible RDS Session Hijack","bit9advancedthreats","-"
