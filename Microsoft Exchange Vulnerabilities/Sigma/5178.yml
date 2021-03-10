@@ -1,0 +1,25 @@
+title: Data Collection with 7z.exe via Commandline
+status: stable
+description: Detects the attempt to data collection via 7z.exe. This method is utilized by adversaries to compress or encrypt data that is collected before exfiltration using 3rd party utilities. 
+references:
+   - https://attack.mitre.org/tactics/TA0009/
+   - https://attack.mitre.org/techniques/T1560/001/
+logsource:
+    product: windows
+    service: security
+    definition1: 'Requirements: Group Policy : Computer Configuration\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Detailed Tracking\Audit Process Creation'
+    definition2: 'Requirements: Group Policy : Computer Configuration\ Administrative Templates\ System\ Audit Process Creation\ Include Command Line'
+detection:
+    selection:
+        EventID: 4688
+        ProcessCommandLine|contains:
+            - '-t7z'
+    condition: selection
+falsepositives:
+    - Legitimate administrative activities
+    - Administrative tools/scripts
+level: low
+tags:
+    - attack.collection
+    - attack.TA0009
+    - attack.T1560.001

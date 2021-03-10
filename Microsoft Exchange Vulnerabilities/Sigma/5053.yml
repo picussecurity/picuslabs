@@ -1,0 +1,26 @@
+title: Suspicious ASPX File Creation 
+status: stable
+description: Detects the creation of .aspx shell file in ASP.NET files directory.  This technique is commonly used for persistence as Hafnium APT group's usage in its campaigns.
+author: Picus Security
+references:
+   - https://attack.mitre.org/techniques/T1505/003/
+   - https://attack.mitre.org/tactics/TA0003/
+   - https://www.microsoft.com/security/blog/2021/03/02/hafnium-targeting-exchange-servers/
+   - https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries/blob/master/Execution/exchange-iis-worker-dropping-webshell.md
+logsource:
+    product: windows
+    service: sysmon
+detection:
+    selection:
+        EventID: 11
+        TargetFilename: 
+            - '*\inetpub\wwwroot*.aspx'
+            - '*\HttpProxy\owa*.aspx'        
+    condition: selection
+falsepositives:
+    - Unknown
+level: high
+tags:
+    - attack.persistence
+    - attack.ta0003
+    - attack.t1505.003

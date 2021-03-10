@@ -1,0 +1,7 @@
+﻿sigma_id,sigma_title
+"3929","Process Dumping via Procdump"
+"7979","Remote Command Execution via Powercat"
+"5053","Suspicious ASPX File Creation"
+"3787","Suspicious PowerShell Invoke Expression Usage"
+"8694","TCP Connection Creating via PowerShell Script"
+"5178","Data Collection with 7z.exe via Commandline"

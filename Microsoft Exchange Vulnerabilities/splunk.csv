@@ -1,0 +1,7 @@
+﻿sigma_id,sigma_title,Splunk
+"3929","Process Dumping via Procdump","(source=""WinEventLog:Security"" EventCode=""4688"" (New_Process_Name=""*procdump.exe*"") Process_Command_Line=""*lsass.exe*"" Process_Command_Line=""*.dmp*"")"
+"7979","Remote Command Execution via Powercat","(source=""WinEventLog:Microsoft-Windows-PowerShell/Operational"" (EventCode=""4104"" TaskCategory=""*remote command*"") ""*Net.Sockets.TcpListener*"" ""*ProcessStartInfo*"")"
+"5053","Suspicious ASPX File Creation","(source=""WinEventLog:Microsoft-Windows-Sysmon/Operational"" EventCode=""11"" (TargetFilename=""*\\inetpub\\wwwroot*.aspx"" OR TargetFilename=""*\\HttpProxy\\owa*.aspx""))"
+"3787","Suspicious PowerShell Invoke Expression Usage","(source=""WinEventLog:Microsoft-Windows-PowerShell/Operational"" EventCode=""4104"" (""*iex*"" OR ""*Invoke-Expression""))"
+"8694","TCP Connection Creating via PowerShell Script","(source=""WinEventLog:Microsoft-Windows-PowerShell/Operational"" EventCode=""4104"" (Message=""*Net.Sockets.TcpClient(*, *)*"" OR Message=""*Net.Sockets.TcpListener(*, *)*""))"
+"5178","Data Collection with 7z.exe via Commandline","(source=""WinEventLog:Security"" EventCode=""4688"" (Process_Command_Line=""*-t7z*""))"

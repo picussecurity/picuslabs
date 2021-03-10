@@ -1,0 +1,7 @@
+﻿sigma_id,sigma_title,Arcsight
+"3929","Process Dumping via Procdump","(deviceVendor = ""Microsoft"" AND deviceProduct = ""Microsoft Windows"" AND externalId = ""4688"" AND destinationProcessName ENDSWITH ""procdump.exe"" AND deviceCustomString4 CONTAINS ""lsass.exe"" AND deviceCustomString4 ENDSWITH "".dmp"")"
+"7979","Remote Command Execution via Powercat","(deviceVendor=""Microsoft"" AND deviceProduct=""PowerShell"" AND (externalId=""4104"" AND deviceCustomString2=""remote command"") AND message CONTAINS ""Net.Sockets.TcpListener"" AND message CONTAINS ""ProcessStartInfo"")"
+"5053","Suspicious ASPX File Creation","(deviceVendor = ""Microsoft"" AND deviceProduct = ""Sysmon"" AND externalId = ""11"" AND filePath ENDWITHS "".aspx"" AND (filePath CONTAINS ""\\inetpub\\wwwroot"") OR (filePath CONTAINS ""\\HttpProxy\\owa""))"
+"3787","Suspicious PowerShell Invoke Expression Usage","(deviceVendor=""Microsoft"" AND deviceProduct=""PowerShell"" AND externalId=""4104"" AND (message CONTAINS ""Invoke-Expression"" OR message CONTAINS ""IEX""))"
+"8694","TCP Connection Creating via PowerShell Script","(deviceVendor=""Microsoft"" AND deviceProduct=""PowerShell"" AND externalId=""4104"" AND (message CONTAINS ""Net.Sockets.TcpClient"" OR message CONTAINS ""Net.Sockets.TcpListener""))"
+"5178","Data Collection with 7z.exe via Commandline","(deviceVendor = ""Microsoft"" AND deviceProduct = ""Microsoft Windows"" AND externalId = ""4688"" AND deviceCustomString4 CONTAINS ""-t7z"" )"

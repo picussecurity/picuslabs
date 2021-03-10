@@ -1,0 +1,29 @@
+title: Suspicious PowerShell Invoke Expression Usage
+status: experimental
+description: Detects the attempt to execute Invoke-Expression cmdlet of PowerShell. This technique is commonly utilized for running commands or expressions on memory without touching disk as MuddyWater Threat Group's usage in its campaigns. 
+author: Picus Security
+references:
+   - https://attack.mitre.org/techniques/T1086/
+   - https://attack.mitre.org/tactics/TA0002/
+   - https://attack.mitre.org/groups/G0069/
+   - https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-expression?view=powershell-6
+logsource:
+    product: windows
+    service: powershell/operational
+    definition1: 'Requirements: Group Policy : Computer Configuration\Administrative Templates\Windows Components\Windows PowerShell\Turn On Module Logging'
+    definition2: 'Requirements: Group Policy : Computer Configuration\Administrative Templates\Windows Components\Windows PowerShell\Turn On PowerShell Script Block Logging'
+detection:
+    selection:
+        EventID: 4104
+    keyword1:
+        - '*iex*'
+        - '*Invoke-Expression'
+    condition: All of them
+falsepositives: 
+    - Administrative tools/scripts
+level: medium
+tags:
+    - attack.execution
+    - attack.t1086
+    - attack.ta0002
+    - attack.g0069

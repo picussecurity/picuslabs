@@ -1,0 +1,7 @@
+﻿sigma_id,sigma_title,Qradar
+"3929","Process Dumping via Procdump","(LOGSOURCETYPENAME(devicetype)='Microsoft Windows Security Event Log' and EventID='4688' and (Image ilike '%procdump.exe%') and ""Process CommandLine"" ilike '%lsass.exe%' and ""Process CommandLine"" ilike '%.dmp%')"
+"7979","Remote Command Execution via Powercat","(LOGSOURCETYPENAME(devicetype)='Microsoft Windows Security Event Log' and (EventID='4104' and TaskCategory ilike '%remote command%') and UTF8(payload) ilike '%*Net.Sockets.TcpListener*%' and UTF8(payload) ilike '%*ProcessStartInfo*%')"
+"5053","Suspicious ASPX File Creation","(LOGSOURCETYPENAME(devicetype)='Microsoft Windows Security Event Log' and EventID='11' and (""File Path"" ilike '%\inetpub\wwwroot%.aspx' or ""File Path"" ilike '%\HttpProxy\owa%.aspx'))"
+"3787","Suspicious PowerShell Invoke Expression Usage","(LOGSOURCETYPENAME(devicetype)='Microsoft Windows Security Event Log' and EventID='4104' and (UTF8(payload) ilike '%*iex*%' or UTF8(payload) ilike '%*Invoke-Expression%'))"
+"8694","TCP Connection Creating via PowerShell Script","(LOGSOURCETYPENAME(devicetype)='Microsoft Windows Security Event Log' and EventID='4104' and (Message ilike '%Net.Sockets.TcpClient(%, %)%' or Message ilike '%Net.Sockets.TcpListener(%, %)%'))"
+"5178","Data Collection with 7z.exe via Commandline","(LOGSOURCETYPENAME(devicetype)='Microsoft Windows Security Event Log' and EventID='4688' and (""Process CommandLine"" ilike '%-t7z%'))"

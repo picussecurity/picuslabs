@@ -1,0 +1,28 @@
+title: Remote Command Execution via Powercat
+status: stable
+description: Detects the Powercat script usage via PowerShell. This technique is commonly utilized for remote command execution.
+author: Picus Security
+references:
+    - https://attack.mitre.org/techniques/T1086/
+    - https://attack.mitre.org/tactics/TA0002/
+logsource:
+    product: windows
+    service: powershell/operational
+    definition1: 'Requirements: Group Policy : Computer Configuration\Administrative Templates\Windows Components\Windows PowerShell\Turn On Module Logging'
+    definition2: 'Requirements: Group Policy : Computer Configuration\Administrative Templates\Windows Components\Windows PowerShell\Turn On PowerShell Script Block Logging'
+detection:
+    selection:
+        EventID: 4104
+        TaskCategory: "*remote command*"
+    keyword: 
+          - '*Net.Sockets.TcpListener*'
+    keyword1:
+          - '*ProcessStartInfo*'
+    condition: all of them
+falsepositives: 
+    - Administrative tools/scripts
+level: medium
+tags:
+    - attack.execution
+    - attack.t1086
+    - attack.ta0002

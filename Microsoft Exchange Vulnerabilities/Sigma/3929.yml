@@ -1,0 +1,29 @@
+title: Process Dumping via Procdump
+status: stable
+description: Detects the attempt to dump processes via procdump. This technique is commonly utilized for carving credentials from lsass.exe process.
+author: Picus Security
+references:
+   - https://attack.mitre.org/techniques/T1003/001/
+   - https://attack.mitre.org/tactics/TA0006/
+   - https://docs.microsoft.com/en-us/sysinternals/downloads/procdump
+logsource:
+    product: windows
+    service: security
+    definition1: 'Requirements: Group Policy : Computer Configuration\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Detailed Tracking\Audit Process Creation'
+    definition2: 'Requirements: Group Policy : Computer Configuration\ Administrative Templates\ System\ Audit Process Creation\ Include Command Line'
+detection:
+    selection:
+        EventID: 4688
+        NewProcessName|contains:
+            - 'procdump.exe'
+        ProcessCommandLine|contains|all: 
+            - 'lsass.exe'
+            - '.dmp'
+    condition: selection
+falsepositives:
+    - Unlikely, legitimate use in red teaming activities
+level: high
+tags:
+    - attack.credential_access
+    - attack.ta0006
+    - attack.t1003.001
