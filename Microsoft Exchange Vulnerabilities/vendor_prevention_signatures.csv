@@ -1,0 +1,30 @@
+PicusCVE,ThreatId,PicusName,SignatureId,SignatureName,Engine,vendor
+,719270,"Backdoor used by HAFNIUM Threat Group .HTML File Download Variant-1",0A097FBC9,"Trojan.ASP.Agent.bh.TC.b",TP,Checkpoint
+,719270,"Backdoor used by HAFNIUM Threat Group .HTML File Download Variant-1",10007108,"HTML/Agent.A121!tr",virus,Fortigate
+,893035,"Generic ASPX Based WebShell Upload to Web Server Variant-1","1.2017260.10","ET WEB_SERVER WebShell Generic - ASP File Uploaded",IPS,Snort
+"CVE-2021-26855",676777,"Microsoft Exchange Server Unauthorized SSRF Vulnerability Variant-2","1.57241.4","SERVER-WEBAPP Microsoft Exchange Server server side request forgery attempt",IPS,Snort
+"CVE-2021-26855",520680,"Microsoft Exchange Server Unauthorized SSRF Vulnerability Variant-1","1.57242.4","SERVER-WEBAPP Microsoft Exchange Server server side request forgery attempt",IPS,Snort
+"CVE-2021-26855",520680,"Microsoft Exchange Server Unauthorized SSRF Vulnerability Variant-1","1.57244.4","SERVER-WEBAPP Microsoft Exchange Server server side request forgery attempt",IPS,Snort
+,510920,"HAFNIUM WebShell Upload to Web Server Variant-2","1.2017260.10","ET WEB_SERVER WebShell Generic - ASP File Uploaded",IPS,Snort
+,349535,"HAFNIUM WebShell Upload to Web Server Variant-1","1.2017260.10","ET WEB_SERVER WebShell Generic - ASP File Uploaded",IPS,Snort
+,893035,"Generic ASPX Based WebShell Upload to Web Server Variant-1",81265,"Webshell.ASP.xl7dev.reGeorg.DOTNET_Tunnel File Detection",spyware,Paloalto
+"CVE-2021-26855",676777,"Microsoft Exchange Server Unauthorized SSRF Vulnerability Variant-2",200018127,"Microsoft Exchange X-BEResource SSRF",WAF,F5
+"CVE-2021-26855",520680,"Microsoft Exchange Server Unauthorized SSRF Vulnerability Variant-1",200018128,"Microsoft Exchange X-AnonResource-Backend SSRF",WAF,F5
+,510920,"HAFNIUM WebShell Upload to Web Server Variant-2",200004048,"ASP/JSP injection attempt ( <% )",WAF,F5
+,510920,"HAFNIUM WebShell Upload to Web Server Variant-2",200104300,"ASPX Web Shell Upload Attempt",WAF,F5
+,510920,"HAFNIUM WebShell Upload to Web Server Variant-2",200004181,"Generic Server Side Code Injection",WAF,F5
+,349535,"HAFNIUM WebShell Upload to Web Server Variant-1",200004048,"ASP/JSP injection attempt ( <% )",WAF,F5
+,349535,"HAFNIUM WebShell Upload to Web Server Variant-1",200104300,"ASPX Web Shell Upload Attempt",WAF,F5
+,349535,"HAFNIUM WebShell Upload to Web Server Variant-1",200004140,"ASP injection attempt ( response .Write ) ( Parameter 1 )",WAF,F5
+,893035,"Generic ASPX Based WebShell Upload to Web Server Variant-1",200004048,"ASP/JSP injection attempt ( <% )",WAF,F5
+,893035,"Generic ASPX Based WebShell Upload to Web Server Variant-1",200104300,"ASPX Web Shell Upload Attempt",WAF,F5
+,893035,"Generic ASPX Based WebShell Upload to Web Server Variant-1",200004140,"ASP injection attempt ( response .Write ) ( Parameter 1 )",WAF,F5
+,893035,"Generic ASPX Based WebShell Upload to Web Server Variant-1",200003024,"""cmd"" execution attempt",WAF,F5
+,893035,"Generic ASPX Based WebShell Upload to Web Server Variant-1",200004044,"ASP injection attempt ( .addheader )",WAF,F5
+,893035,"Generic ASPX Based WebShell Upload to Web Server Variant-1",200004049,"ASP injection attempt ( response .BinaryWrite )",WAF,F5
+,893035,"Generic ASPX Based WebShell Upload to Web Server Variant-1",200004181,"Generic Server Side Code Injection",WAF,F5
+"CVE-2021-26855",520680,"Microsoft Exchange Server Unauthorized SSRF Vulnerability Variant-1",0x4528a400,"HTTP: Microsoft Exchange Server Remote Code Execution Vulnerability (CVE-2021-26855)",Exploit,Mcafee
+,719270,"Backdoor used by HAFNIUM Threat Group .HTML File Download Variant-1",,"File_Malware-Blocked",FileRep,Forcepoint
+"CVE-2021-26855",676777,"Microsoft Exchange Server Unauthorized SSRF Vulnerability Variant-2","1.57241.4","SERVER-WEBAPP Microsoft Exchange Server server side request forgery attempt",Intrusion,Firepower
+"CVE-2021-26855",520680,"Microsoft Exchange Server Unauthorized SSRF Vulnerability Variant-1","1.57242.4","SERVER-WEBAPP Microsoft Exchange Server server side request forgery attempt",Intrusion,Firepower
+"CVE-2021-26855",520680,"Microsoft Exchange Server Unauthorized SSRF Vulnerability Variant-1","1.57244.4","SERVER-WEBAPP Microsoft Exchange Server server side request forgery attempt",Intrusion,Firepower
